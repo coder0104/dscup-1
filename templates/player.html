@@ -27,8 +27,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
-    <a href="{{ url_for('main') }}">
-        <img class="logo2" src="{{ url_for('static', filename='logo-2.png') }}" alt="Logo">
+    <a href="index.html">
+        <img class="logo2" src="../static/logo-2.png" alt="Logo">
     </a>
 
     <h1>선수 명단</h1>
@@ -39,7 +39,7 @@
 
     <script>
         
-        const csvUrl = "{{ url_for('static', filename='player.csv') }}";
+        const csvUrl = "../static/player.csv";
 
         Papa.parse(csvUrl, {
             download: true,
