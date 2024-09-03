@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template, send_from_directory
 import csv
 import os
 
+# Flask
 app = Flask(__name__)
 votes_db = {}
 players_db = {}

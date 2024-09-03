@@ -19,8 +19,9 @@
             cursor: pointer;
         }
     </style>
+    <link rel="stylesheet" href="../static/css/mvpindex.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script src="{{ url_for('static', filename='client.js') }}"></script>
+    <script src="../static/js/client.js"></script>
 </head>
 <body>
     <h1 onclick="goToMain()">MVP 투표</h1>
@@ -34,7 +35,7 @@
 
     <script>
         function goToMain() {
-            window.location.href = "{{ url_for('main') }}";
+            window.location.href = "index.html";
         }
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -58,7 +59,7 @@
                 }
             }
 
-            Papa.parse("{{ url_for('static', filename='player.csv') }}", {
+            Papa.parse("../static/csv/player.csv", {
                 download: true,
                 header: true,
                 complete: function(results) {
